@@ -1,0 +1,116 @@
+.map-container{
+  display:flex;
+  padding:30px;
+  gap:40px;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-container::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/hcdc.jpg") center / cover no-repeat;
+  filter: blur(4px);
+  transform: scale(1.03);
+  z-index: -2;
+}
+
+.map-container::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(37, 99, 235, 0.28);
+  z-index: -1;
+}
+
+.parking-grid{
+  display:grid;
+  grid-template-columns:repeat(15, 70px);
+  gap:12px;
+  flex: 0 1 auto;
+}
+
+.parking-spot{
+  width:80px;
+  height:80px;
+  border:none;
+  border-radius:10px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.parking-spot:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.parking-spot:active {
+  transform: scale(0.98);
+}
+
+.available{
+  background:var(--green);
+}
+
+.occupied{
+  background:var(--red);
+}
+
+.details-panel{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  width:280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--blue);
+  flex-shrink: 0;
+  position: sticky;
+  top: 30px;
+  height: fit-content;
+}
+
+.details-panel h2 {
+  color: var(--dark);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.details-panel h3 {
+  color: var(--blue);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.details-panel p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.details-content {
+  display: none;
+}
+
+.details-content.show {
+  display: block;
+}
+
+.no-selection-message {
+  color: #9ca3af;
+  font-style: italic;
+  padding: 20px 0;
+  text-align: center;
+}

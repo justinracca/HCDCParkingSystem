@@ -1,0 +1,102 @@
+.login-container{
+  display:flex;
+  height:100vh;
+}
+
+.login-left{
+  width:50%;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("../assets/images/parking.jpg");
+
+  background-size:cover;
+  background-position:center;
+
+  color: white;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-right{
+  width:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-card{
+  background:white;
+  padding:40px;
+  border-radius:12px;
+  width:350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.card-header h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.card-header p {
+  color: #6b7280;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tab-btn {
+  padding: 12px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.tab-btn:hover {
+  color: #2563eb;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.tab-content h2 {
+  margin-bottom: 18px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

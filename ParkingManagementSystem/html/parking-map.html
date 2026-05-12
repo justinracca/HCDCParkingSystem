@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parking Map</title>
+
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/map.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <h1>Parking Map</h1>
+
+  <nav>
+    <a href="./dashboard.html">Dashboard</a>
+    <a href="./parking-map.html">Parking Map</a>
+    <a href="./reservations.html">Reservations</a>
+    <a href="./index.html">Logout</a>
+  </nav>
+</header>
+
+<main class="map-container">
+
+  <div class="parking-grid" id="parking-grid">
+
+  </div>
+
+  <div class="details-panel">
+    <h2>Spot Details</h2>
+    <div id="spot-details" class="details-content">
+    </div>
+    <div id="no-selection" class="no-selection-message">
+      Select a parking spot
+    </div>
+  </div>
+
+</main>
+
+<script src="../js/map.js"></script>
+</body>
+</html>

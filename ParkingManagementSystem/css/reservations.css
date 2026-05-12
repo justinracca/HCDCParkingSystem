@@ -1,0 +1,63 @@
+.reservations-container{
+  padding:20px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.reservations-container::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/hcdc.jpg") center / cover no-repeat;
+  filter: blur(4px);
+  transform: scale(1.03);
+  z-index: -2;
+}
+
+.reservations-container::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(37, 99, 235, 0.28);
+  z-index: -1;
+}
+
+.reservations-container .card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-top: 3px solid var(--blue);
+}
+
+.reservations-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.reservations-container form input,
+.reservations-container form select {
+  grid-column: span 1;
+}
+
+.reservations-container form button {
+  grid-column: span 2;
+}
+
+.reservations-container #reservations-list {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.reservations-container .card h3 {
+  color: var(--blue);
+  margin-bottom: 10px;
+  font-size: 18px;
+}

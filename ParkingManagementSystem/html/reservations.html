@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reservations</title>
+
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/reservations.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <h1>Reservations</h1>
+
+  <nav>
+    <a href="./dashboard.html">Dashboard</a>
+    <a href="./parking-map.html">Parking Map</a>
+    <a href="./reservations.html">Reservations</a>
+    <a href="./index.html">Logout</a>
+  </nav>
+</header>
+
+<main class="reservations-container">
+
+  <div class="card">
+    <h2>Create Reservation</h2>
+
+    <form id="reservationForm">
+
+      <input type="date" id="date">
+
+      <input type="time" id="time">
+
+      <input type="text" id="plateNumber" placeholder="Plate Number">
+
+      <select id="parkingSpace">
+        <option value="">Select Parking Space</option>
+      </select>
+
+      <button type="submit" class="btn btn-primary">
+        Reserve
+      </button>
+
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Current Reservations</h2>
+
+    <div id="reservations-list"></div>
+  </div>
+
+</main>
+
+<script src="../js/reservations.js"></script>
+</body>
+</html>

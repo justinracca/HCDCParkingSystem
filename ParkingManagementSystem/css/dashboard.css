@@ -1,0 +1,77 @@
+.dashboard{
+  padding:20px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/hcdc.jpg") center / cover no-repeat;
+  filter: blur(4px);
+  transform: scale(1.03);
+  z-index: -2;
+}
+
+.dashboard::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(37, 99, 235, 0.28);
+  z-index: -1;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.stat-card{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--blue);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card h3 {
+  color: var(--dark);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.stat-card p{
+  font-size:36px;
+  font-weight: 700;
+  color:var(--blue);
+}
+
+#available-spaces {
+  color: var(--green);
+}
+
+#occupied-spaces {
+  color: var(--red);
+}
